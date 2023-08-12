@@ -1,0 +1,37 @@
+.nav {
+  position: fixed;
+  min-width: 296px;
+  min-height: 100vh;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  &-link {
+    position: relative;
+    color: $dark;
+    padding: 0 32px;
+    transition: 0.3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      margin-left: -32px;
+      // border-left: 4px solid $green;
+      background-color: $green;
+      padding-left: 0;
+      height: 100%;
+      transition: 0 0.3s;
+    }
+
+    &:hover,
+    &.active {
+      color: $green;
+      &::before {
+        padding-left: 4px;
+      }
+    }
+  }
+}
+
+.main {
+  margin-left: 296px;
+}
